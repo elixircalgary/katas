@@ -2,9 +2,9 @@
 
 This are sample Katas taken mostly from codewars.
 
-## Create a PR
+## Instructions
 
-Solve the katas and share your solution doing PR
+Solve the katas and share your solution doing a PR
 
 1. Fork the repo
 2. Create a branch
