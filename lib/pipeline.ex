@@ -1,6 +1,4 @@
-
 defmodule Pipeline do
-
   @moduledoc """
   Issue Looks like some hoodlum plumber and his brother has been running around
   and damaging your stages again.

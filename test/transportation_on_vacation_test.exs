@@ -20,5 +20,4 @@ defmodule TransportationOnVacationTest do
     assert rental_car_cost(9) == 310
     assert rental_car_cost(10) == 350
   end
-
 end

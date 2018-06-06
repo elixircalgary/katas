@@ -1,4 +1,3 @@
-
 defmodule ATM do
   @moduledoc """
   An ATM ran out of 10 dollar bills and only has 100, 50 and 20 dollar bills.
@@ -19,6 +18,7 @@ defmodule ATM do
   Taken from codewars
   """
   def withdraw(n) do
-    [0, 0, 0] # TODO : Code your solution
+    # TODO : Code your solution
+    [0, 0, 0]
   end
 end

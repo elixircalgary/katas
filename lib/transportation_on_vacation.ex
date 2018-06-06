@@ -11,6 +11,6 @@ defmodule TransportationOnVacation do
   Taken from codewars
   """
   def rental_car_cost(d) do
-    #TODO
+    # TODO
   end
 end

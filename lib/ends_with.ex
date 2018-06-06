@@ -10,6 +10,5 @@ defmodule EndsWith do
   Taken from codewars
   """
   def solution(str, ending) do
-
   end
 end
