@@ -1,21 +1,14 @@
 # Katas
 
-**TODO: Add description**
+This are sample Katas taken mostly from codewars.
 
-## Installation
+## Create a PR
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `katas` to your list of dependencies in `mix.exs`:
+Solve the katas and share your solution doing PR
 
-```elixir
-def deps do
-  [
-    {:katas, "~> 0.1.0"}
-  ]
-end
-```
+1. Fork the repo
+2. Create a branch
+3. Solve katas
+4. Open a PR 
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/katas](https://hexdocs.pm/katas).
-
+Elixir Calgary.
