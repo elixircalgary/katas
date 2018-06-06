@@ -9,7 +9,6 @@ defmodule EndsWith do
 
   """
   def solution(str, ending) do
-     str =~ ~r/#{ending}\z/
 
   end
 end
