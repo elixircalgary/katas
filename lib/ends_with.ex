@@ -7,6 +7,7 @@ defmodule EndsWith do
   solution("abc", "bc") # returns true
   solution("abc", "d") # returns false
 
+  Taken from codewars
   """
   def solution(str, ending) do
 
