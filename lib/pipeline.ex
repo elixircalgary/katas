@@ -18,6 +18,7 @@ defmodule Pipeline do
   Output: 1,2,3,4,5,6,7,8
   """
   def fix_pipe(pipes) do
-    # TODO
+    sort_pipes = Enum.sort(pipes)
+    Enum.to_list(List.first(sort_pipes)..List.last(sort_pipes))
   end
 end
