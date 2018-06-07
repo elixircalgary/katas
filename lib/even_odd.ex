@@ -4,10 +4,11 @@ defmodule EvenOdd do
 
   Taken from codewars.
   """
-  def even_or_odd(number) do
-    case rem(number, 2) do
-      0 -> "Even"
-      _ -> "Odd"
-    end
+  def even_or_odd(number) when rem(number, 2) == 0 do
+    "Even"
+  end
+
+  def even_or_odd(_) do
+    "Odd"
   end
 end
