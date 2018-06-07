@@ -10,5 +10,28 @@ defmodule EndsWith do
   Taken from codewars
   """
   def solution(str, ending) do
+    check(reverse(str) |> to_list, reverse(ending) |> to_list)
+  end
+
+  def check([h|t], [h1|t1]) when h == h1 do
+    check(t,t1)
+  end
+
+  def check(_, []) do
+    true
+  end
+
+  def check(_, _) do
+    false
+  end
+
+
+
+  defp to_list(str) do
+    String.split(str, ~r{}, trim: true)
+  end
+
+  defp reverse(str) do
+    String.reverse(str)
   end
 end

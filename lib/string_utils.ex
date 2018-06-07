@@ -5,7 +5,19 @@ defmodule StringUtils do
 
   Taken from codewars.
   """
-  def digit?(s) do
-    # TODO ...
+  def digit?(s) when is_binary(s) do
+    digit?(Integer.parse(s))
+  end
+
+  def digit?({s, _}) when is_integer(s) and s < 9 do
+    true
+  end
+
+  def digit?({s, _}) when is_integer(s) and s > 9 do
+    false
+  end
+
+  def digit?(:error) do
+    false
   end
 end

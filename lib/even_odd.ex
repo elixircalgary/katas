@@ -5,5 +5,9 @@ defmodule EvenOdd do
   Taken from codewars.
   """
   def even_or_odd(number) do
+    case rem(number, 2) do
+      0 -> "Even"
+      _ -> "Odd"
+    end
   end
 end
