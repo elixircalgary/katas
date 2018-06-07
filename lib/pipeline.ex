@@ -16,10 +16,17 @@ defmodule Pipeline do
   Input: 1,3,5,6,7,8
 
   Output: 1,2,3,4,5,6,7,8
+
+  One could solve this with one function like this:
+
+  def fix_pipe(pipes) do
+    (List.first(pipes)..List.last(pipes))
+    |> Enum.map(fn i -> i end)
+  end
+
+  But why :)
   """
   def fix_pipe(pipes) do
-    # (List.first(pipes)..List.last(pipes))
-    # |> Enum.map(fn i -> i end)
     fix_pipe(pipes, [])
   end
 
