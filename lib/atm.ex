@@ -35,7 +35,7 @@ defmodule ATM do
     choose_bills(%{bills | 20 => bills[20] + 1}, n - 20)
   end
 
-  def choose_bills(bills, n) do
+  def choose_bills(bills, _) do
     bills
     |> Map.values
     |> Enum.reverse
