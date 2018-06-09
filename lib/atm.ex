@@ -24,7 +24,7 @@ defmodule ATM do
   defguard changeable?(amount, bill) when amount >= bill and rem(amount, bill) == 0
 
   def choose_bills(bills, n) when changeable?(n, 100) do
-   choose_bills(%{bills | 100 => bills[100] + 1}, n - 100)
+    choose_bills(%{bills | 100 => bills[100] + 1}, n - 100)
   end
 
   def choose_bills(bills, n) when changeable?(n, 50) do
@@ -37,7 +37,7 @@ defmodule ATM do
 
   def choose_bills(bills, n) do
     bills
-    |> Map.values
-    |> Enum.reverse
+    |> Map.values()
+    |> Enum.reverse()
   end
 end
