@@ -6,6 +6,6 @@ defmodule StringUtils do
   Taken from codewars.
   """
   def digit?(s) do
-    # TODO ...
+    s =~ ~r/^\d\z/
   end
 end

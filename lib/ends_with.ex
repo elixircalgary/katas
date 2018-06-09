@@ -10,5 +10,6 @@ defmodule EndsWith do
   Taken from codewars
   """
   def solution(str, ending) do
+    str =~ ~r/#{ending}\z/
   end
 end

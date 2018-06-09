@@ -4,6 +4,6 @@ defmodule EvenOdd do
 
   Taken from codewars.
   """
-  def even_or_odd(number) do
-  end
+  def even_or_odd(number) when rem(number, 2) == 0, do: "Even"
+  def even_or_odd(_), do: "Odd"
 end
