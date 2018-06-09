@@ -18,7 +18,26 @@ defmodule ATM do
   Taken from codewars
   """
   def withdraw(n) do
-    # TODO : Code your solution
-    [0, 0, 0]
+    choose_bills(%{20 => 0, 50 => 0, 100 => 0}, n)
+  end
+
+  defguard changeable?(amount, bill) when amount >= bill and rem(amount, bill) == 0
+
+  def choose_bills(bills, n) when changeable?(n, 100) do
+   choose_bills(%{bills | 100 => bills[100] + 1}, n - 100)
+  end
+
+  def choose_bills(bills, n) when changeable?(n, 50) do
+    choose_bills(%{bills | 50 => bills[50] + 1}, n - 50)
+  end
+
+  def choose_bills(bills, n) when n >= 20 do
+    choose_bills(%{bills | 20 => bills[20] + 1}, n - 20)
+  end
+
+  def choose_bills(bills, n) do
+    bills
+    |> Map.values
+    |> Enum.reverse
   end
 end
