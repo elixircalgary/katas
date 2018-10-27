@@ -10,7 +10,23 @@ defmodule TransportationOnVacation do
 
   Taken from codewars
   """
-  def rental_car_cost(d) do
-    # TODO
+  def rental_car_cost(d) when d < 3 do
+    cost(d)
+  end
+
+  def rental_car_cost(d) when d >= 3 and d < 7 do
+    cost(d, 20)
+  end
+
+  def rental_car_cost(d) when d >= 7 do
+    cost(d, 50)
+  end
+
+  defp cost(d) do
+    d * 40
+  end
+
+  defp cost(d, discount) do
+    cost(d) - discount
   end
 end

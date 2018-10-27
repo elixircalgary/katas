@@ -18,7 +18,24 @@ defmodule ATM do
   Taken from codewars
   """
   def withdraw(n) do
-    # TODO : Code your solution
-    [0, 0, 0]
+    bills([0, 0, 0], n)
+  end
+
+  defguard test?(number, divisor) when number >= divisor and rem(number, divisor) == 0
+
+  def bills([h, f, t], number) when test?(number, 100) do
+    bills([h + 1, f, t], number - 100)
+  end
+
+  def bills([h, f, t], number) when test?(number, 50) do
+    bills([h, f + 1, t], number - 50)
+  end
+
+  def bills([h, f, t], number) when number >= 20 do
+    bills([h, f, t + 1], number - 20)
+  end
+
+  def bills(list, number) do
+    list
   end
 end

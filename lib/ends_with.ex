@@ -9,6 +9,25 @@ defmodule EndsWith do
 
   Taken from codewars
   """
-  def solution(str, ending) do
+  def solution(str, ending) when is_binary(str) and is_binary(ending) do
+    solution(prepare_check(str), prepare_check(ending))
+  end
+
+  def solution([h|t], [h1|t1]) when h == h1 do
+    solution(t,t1)
+  end
+
+  def solution(_, []) do
+    true
+  end
+
+  def solution(_, _) do
+    false
+  end
+
+  defp prepare_check(str) do
+    str
+    |> String.reverse
+    |> String.to_charlist
   end
 end
